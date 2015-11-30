@@ -1,9 +1,18 @@
-require 'minitest/autorun'
+
+begin
+  require 'minitest/autorun'
+  TestClass = Minitest::Test
+  puts 'Using minitest gem'
+rescue Exception
+  require 'test/unit'
+  TestClass = Test::Unit::TestCase
+  puts 'using standard lib minitest'
+end
 $LOAD_PATH.unshift(File.join(__dir__, '..', 'lib'))
 require 'fibonacci'
 
 
-class MyTest < Minitest::Test
+class MyTest < TestClass
 
   def setup
     @expected = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946]
