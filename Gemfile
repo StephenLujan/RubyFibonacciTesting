@@ -8,4 +8,5 @@ group :test do
   gem 'cucumber'
   gem 'minitest'
   #gem 'test-unit'
+  gem 'rspec-collection_matchers'
 end
