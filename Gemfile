@@ -6,4 +6,5 @@ group :test do
   gem 'rspec'#, :require => 'spec'
   gem 'colorize'
   gem 'cucumber'
+  gem 'minitest'
 end

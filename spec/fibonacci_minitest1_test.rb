@@ -1,16 +1,12 @@
-require 'test/unit'
+require 'minitest/autorun'
 $LOAD_PATH.unshift(File.join(__dir__, '..', 'lib'))
-require 'fibbonacci'
+require 'fibonacci'
 
 
-class MyTest < Test::Unit::TestCase
+class MyTest < Minitest::Test
 
   def setup
     @expected = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946]
-  end
-
-  def teardown
-    # Do nothing
   end
 
   def test_that_sequence_is_correct
