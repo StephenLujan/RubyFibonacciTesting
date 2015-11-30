@@ -1,8 +1,17 @@
+class Fibbonacci
+  attr_accessor :first_number
+  attr_accessor :second_number
 
-def fibonacci_sequence(length)
-  array = [0, 1]
-  while array.length < length
-    array << array[-1] + array[-2]
+  def initialize(first_number=1, second_number=1)
+    @first_number = first_number
+    @second_number = second_number
   end
-  array
+
+  def fibonacci_sequence(length)
+    array = [@first_number, @second_number]
+    while array.length < length
+      array << array[-1] + array[-2]
+    end
+    array
+  end
 end

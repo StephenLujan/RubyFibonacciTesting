@@ -14,9 +14,9 @@ GEM
       gherkin3 (~> 3.1.0)
     diff-lcs (1.2.5)
     gherkin3 (3.1.2)
-    minitest (5.4.3)
     multi_json (1.11.2)
     multi_test (0.1.2)
+    power_assert (0.2.2)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -30,6 +30,8 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
+    test-unit (3.0.8)
+      power_assert
 
 PLATFORMS
   x86-mingw32
@@ -37,5 +39,8 @@ PLATFORMS
 DEPENDENCIES
   colorize
   cucumber
-  minitest
   rspec
+  test-unit
+
+BUNDLED WITH
+   1.10.6
