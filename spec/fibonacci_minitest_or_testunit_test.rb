@@ -1,9 +1,13 @@
-
+#test/unit and  minitest can use the same syntax
 begin
+  #
   require 'minitest/autorun'
   TestClass = Minitest::Test
   puts 'Using minitest gem'
 rescue Exception
+  # Test::Unit 2.x - Improved version of Test::Unit bundled in Ruby 1.8.x.
+  # Ruby 1.9.x bundles minitest not Test::Unit. Test::Unit bundled in Ruby 1.8.x
+  # had not been improved but unbundled Test::Unit (Test::Unit 2.x) will be improved actively.
   require 'test/unit'
   TestClass = Test::Unit::TestCase
   puts 'using standard lib minitest'
