@@ -15,12 +15,13 @@ require 'fibonacci'
 class MyTest < TestClass
 
   def setup
-    @expected = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946]
+    @expected = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946]
+    @fibonacci = Fibonacci.new
   end
 
   def test_that_sequence_is_correct
     for i in 2..10
-      assert_equal fibonacci_sequence(i), @expected[0...i]
+      assert_equal @fibonacci.sequence(i), @expected[0...i]
     end
   end
 end
