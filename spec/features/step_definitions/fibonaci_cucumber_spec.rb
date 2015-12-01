@@ -19,4 +19,7 @@ end
 Then(/^I can assert that Fibonacci\.new\(first, second\)\.sequence\(length\)\s*==\s*(\[\s*(\d+\,\s*)+\d+\])$/) do |arg1, arg2|
   eval("@sequence = #{arg1}")
   expect(Fibonacci.new(@first, @second).sequence(@length)).to eq(@sequence)
+
+  # minitest / test/unit  style assertions don't appear to work
+  #assert_equal Fibonacci.new(@first, @second).sequence(@length), @sequence
 end
