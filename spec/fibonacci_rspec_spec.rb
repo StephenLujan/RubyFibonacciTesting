@@ -5,6 +5,18 @@ require 'fibonacci'
 
 
 describe Fibonacci do
+  describe "new" do
+    it "can be created with no arguments" do
+      expect(Fibonacci.new).to be_a(Fibonacci)
+    end
+
+    it "can be created with seed numbers" do
+      fibonacci = Fibonacci.new(8, 9)
+      expect(fibonacci).to be_a(Fibonacci)
+      expect(fibonacci.first_number).to eq(8)
+      expect(fibonacci.second_number).to eq(9)
+    end
+  end
   context 'with the default starting numbers' do
     subject(:fibonacci) { Fibonacci.new }
     describe "#sequence" do
