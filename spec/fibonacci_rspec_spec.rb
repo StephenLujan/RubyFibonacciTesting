@@ -1,2 +1,5 @@
+
+# this wrapper loads rspec
+# see also fibonacci_minitest_spec.rb
 require 'rspec'
-require 'my_spec'
+require 'fibonacci_spec'
